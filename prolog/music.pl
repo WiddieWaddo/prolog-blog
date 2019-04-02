@@ -1,6 +1,7 @@
 musician(eric_clapton, guitar).
 musician(john_mayer, guitar).
-musician(john_fruciante, guitar).
+musician(john_frusciante, guitar).
+musician(john_frusciante, singer).
 musician(jimmy_pop, singer).
 musician(chad_smith, drums).
 musician(anthony_kiedis, singer).
