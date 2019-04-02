@@ -218,7 +218,8 @@ Huizen = list(
 huis(noor,geel,vos,water,kools),
 huis(oekrainer,blauw,paard,thee,chesterfield),
 huis(engelsman,rood,slak,melk,oldgold),
-huis(spanjaard,ivoor,hond,sinasappelsap,luckystrike),huis(japanner,groen,zebra,koffie,parliaments))
+huis(spanjaard,ivoor,hond,sinasappelsap,luckystrike),
+huis(japanner,groen,zebra,koffie,parliaments))
 
 WieWater = noor
 WieZebra = japanner ? ;
