@@ -1,37 +1,5 @@
-## Welcome to GitHub Pages
+Als software-ontwikkelaar loop je soms tegen problemen aan waar je even geen antwoord op weet: *Waarom werken bepaalde operaties niet?*, *Waar gaat de calculatie mis?* kortom; *Waarom krijg ik niet de output die ik verwacht?* De meeste vraagstukken die we dagelijks tegenkomen gaan ervan uit dat je de input en output weet. Je kan met een programeertaal de computer precies vertellen wat hij moet doen om de output te bereiken. Dit soort talen noemen we imperatieve talen. Wat nou als we niet weten wat de output moet zijn, maar wel weten wat de situatie is? Daarvoor hebben we declaratieve (logische) talen.
 
-You can use the [editor on GitHub](https://github.com/WiddieWaddo/prolog-blog/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Na een zondag bezig te zijn geweest met Prolog is het meer duidelijk geworden hoe de taal werkt en wat het van de ontwikkelaar verwacht. Het [boek](https://www.amazon.com/Seven-Languages-Weeks-Programming-Programmers/dp/193435659X) wat ik heb gebruikt voor de kennismaking met Prolog heeft mij geholpen de beginselen door te krijgen. Het mooie aan Prolog is dat je dus geen kennis hoeft de hebben van de oplossing van een probleem. Een goede vergelijking is het repareren van een auto, je brengt hem naar de monteur, geeft aan wat er aan de hand is en hoe je zou willen dat auto werkt. De monteur maakt de auto en jij rijdt later die middag weer vrolijk rond. Prolog is die monteur.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/WiddieWaddo/prolog-blog/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## 
