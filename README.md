@@ -5,21 +5,48 @@ Na een zondag bezig te zijn geweest met Prolog is het meer duidelijk geworden ho
 
 ## Feiten & Regels
 
-Prolog werkt met zogenaamde feiten en regels. Met deze feiten en regels dient de ontwikkelaar de situatie te definiëren. Een voorbeeld van feiten en hoe ze werken:
-
-Een lijst met feiten van muzikanten hun *taak* in de band en welk genre ze spelen.
+Prolog werkt met zogenaamde feiten en regels. Met deze feiten en regels dient de ontwikkelaar de situatie te definiëren. Dit is beter uit te leggen aan de hand van een voorbeeld. Eerst definieeren we de feiten.
 ```Prolog
-musician(eric_clapton, guitar).
-musician(john_mayer, guitar).
 musician(john_fruciante, guitar).
-musician(jimmy_pop, singer).
 musician(lemmy_kilmister, bass).
 musician(ozzy_osbourne, singer).
 
-musician_genre(eric_clapton, rock).
-musician_genre(john_mayer, pop).
 musician_genre(john_fruciante, alt-rock).
-musician_genre(jimmy_pop, punk).
 musician_genre(lemmy_kilmister, metal).
 musician_genre(ozzy_osbourne, metal).
 ```
+
+Wat is nu de situatie die we hebben gedefinieerd? In de feiten geven we aan de John gitaar speelt. Lemmy speelt Bass en Ozzy is zanger. Is dat ook wat Prolog heeft begrepen?
+```Prolog
+| ?- musician(john_fruciante, guitar).
+
+yes
+| ?- musician(john_fruciante, bass).
+
+no
+```
+Prachtig! Al is dit niet de meest spannende vraag de we aan prolog stellen het geeft wel een beeld van wat je kan verwachten. Eerder hebben we gezegd dat John gitaar speelt. Als we vragen of John gitaar speelt zegt Prolog *yes*. Dat zou het antwoord op vraag twee ook duidelijk moeten maken.
+
+Laten we een regel toevoegen aan het programma.
+```Prolog
+friends(X, Y) :- 
+    \+(X = Y), 
+    musician_genre(X, Z), 
+    musician_genre(Y, Z).
+```
+Prolog kan nu antwoord geven op de vraag wie er bevriend zijn.
+```Prolog
+| ?- friends(lemmy_kilmister, ozzy_osbourne).
+
+yes
+| ?- friends(lemmy_kilmister, john_fruciante).
+
+no
+```
+De regel die we hebben toegevoegd aan het programma maakt gebruik van feiten om te zien of de input tot een *yes* geevalueert kan worden. **friends(X, Y)** is de declaratie van de regel, in Prolog jargon wordt hier ook wel friends/2 gebruikt. De regel wordt afgesloten met :-, dit symbool kun je goed interpreteren als "is yes als:". Hierna volgt een drietal doelen, als deze doelen gezamelijk tot *yes* evalueren dan zal friends/2 dat ook doen. In de eerste aanroep van friends X = lemmy_kilmister & Y = ozzy_osbourne. Dan gaan we kijken naar de implementatie van friends/2. \+(X = Y) betekend X != Y. In de regels daarna wordt de feit musician_genre/2 aangeroepen. Prolog gaat op zoek naar een situatie waar:
+```
+musician_genre(lemmy_kilmister, Z).
+musician_genre(ozzy_osbourne, Z).
+``` 
+Toevallig bevinden beide heren zich in het metal genre en is er dus een situatie waar friends/2 tot *yes* evalueert.
+

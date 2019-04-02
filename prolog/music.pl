@@ -2,7 +2,6 @@ musician(eric_clapton, guitar).
 musician(john_mayer, guitar).
 musician(john_fruciante, guitar).
 musician(jimmy_pop, singer).
-musician(flea, bass).
 musician(chad_smith, drums).
 musician(anthony_kiedis, singer).
 musician(lemmy_kilmister, bass).
@@ -17,3 +16,5 @@ musician_genre(chad_smith, alt-rock).
 musician_genre(anthony_kiedis, alt-rock).
 musician_genre(lemmy_kilmister, metal).
 musician_genre(ozzy_osbourne, metal).
+
+friends(X, Y) :- \+(X = Y), musician_genre(X, Z), musician_genre(Y, Z).
